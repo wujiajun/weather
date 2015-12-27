@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  	<classPathEntry location="tool/MBG/mysql-connector-java-5.1.12.jar" />
+	
+	<context id="idea" targetRuntime="MyBatis3">
+	  	
+	  	<plugin type="com.juzhai.mybatisPlugin.ModelExampleLimitPlugin" />
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+	  
+	    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+	        connectionURL="jdbc:mysql://localhost:3306/weather"
+	        userId="root"
+	        password="111111">
+	    </jdbcConnection>
+	
+	    <javaTypeResolver >
+	      <property name="forceBigDecimals" value="false" />
+	    </javaTypeResolver>
+	
+	    <javaModelGenerator targetPackage="com.weather.passport.model" targetProject="src/main/java">
+	      <property name="enableSubPackages" value="false" />
+	      <property name="trimStrings" value="true" />
+	    </javaModelGenerator>
+	
+	    <sqlMapGenerator targetPackage="mybatis.passport"  targetProject="src/main/resources">
+	      <property name="enableSubPackages" value="false" />
+	    </sqlMapGenerator>
+	
+	    <javaClientGenerator type="XMLMAPPER" targetPackage="com.weather.passport.mapper"  targetProject="src/main/java">
+	      <property name="enableSubPackages" value="false" />
+	    </javaClientGenerator>
+	    
+	    <!-- <table tableName="tb_donate" domainObjectName="Donate" >		        
+			<property name="useActualColumnNames" value="false"/>
+	    </table> -->
+	    
+	    <table tableName="tb_order" domainObjectName="Order" >		        
+			<property name="useActualColumnNames" value="false"/>
+	    </table>
+	    
+	</context>
+	
+</generatorConfiguration>

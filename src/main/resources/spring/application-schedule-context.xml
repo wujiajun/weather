@@ -102,13 +102,13 @@
 	<bean id="scheduler"  class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
 		<property name="triggers">
 			<list>
-				<ref bean="remindUserTrigger"/>
+				<!-- <ref bean="remindUserTrigger"/> -->
 				<!-- <ref bean="parallelRemindUserTrigger"/> -->
 				<!-- <ref bean="forkJoinRemindUserTrigger"/> -->
-				<ref bean="spideWeatherDataTrigger"/>
+				<!-- <ref bean="spideWeatherDataTrigger"/> -->
 				<!-- <ref bean="initRemindTrigger"/> -->
-				<ref bean="removeInactiveTokenTrigger"/>
-				<ref bean="spideSuggestImageUrlTrigger"/>
+				<!-- <ref bean="removeInactiveTokenTrigger"/> -->
+				<!-- <ref bean="spideSuggestImageUrlTrigger"/> -->
 			</list>
 		</property>
 	</bean>
